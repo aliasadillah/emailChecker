@@ -1,4 +1,5 @@
 import easyimap as e
+import smtplib
 email = "testemailfor.ali1@gmail.com"
 password = "test1234."
 server = e.connect("imap.gmail.com",email,password)
@@ -7,13 +8,10 @@ for i in range (len(server.listids())):
     body = mail.body
     conts = list(body.split(" "))
 conts2 = []
+
 for j in range (len(conts)):
-    #print(j)
     conts2.append(conts[j].lower())
-    #testcase
-    #print(len(conts2))
-##        if conts[j] == "google":
-##            print("hi")
+
 for k in range (len(conts2)):
     if conts2[j] == "google":
         print("hi")
